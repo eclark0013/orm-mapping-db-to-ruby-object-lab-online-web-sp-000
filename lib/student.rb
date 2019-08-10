@@ -42,12 +42,8 @@ class Student
     sql = <<-SQL
       SELECT *
       FROM students
-      WHERE name = ?
-      LIMIT 1
+      WHERE grade = 9
     SQL
-
-    student = DB[:conn].execute(sql, name).first
-    self.new_from_db(student)
   end
 
   def save
