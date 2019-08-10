@@ -31,6 +31,9 @@ class Student
       WHERE name = ?
       LIMIT 1
     SQL
+
+    student = DB[:conn].execute(sql, name)
+    self.new(student)
   end
 
   def save
