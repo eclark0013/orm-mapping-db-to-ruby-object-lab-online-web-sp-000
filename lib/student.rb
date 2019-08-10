@@ -80,7 +80,6 @@ class Student
     SQL
 
     DB[:conn].execute(sql).first.new_from_db
-    end
   end
 
   def save
