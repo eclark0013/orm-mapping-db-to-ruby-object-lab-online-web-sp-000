@@ -63,10 +63,10 @@ class Student
       SELECT *
       FROM students
       WHERE grade = 10
-      LIMIT 1
+      LIMIT ?
     SQL
 
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, 1)
   end
 
   def save
