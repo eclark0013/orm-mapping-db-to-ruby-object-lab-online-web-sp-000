@@ -79,7 +79,7 @@ class Student
       LIMIT 1
     SQL
 
-    DB[:conn].execute(sql).first.new_from_db
+    self.new_from_db(DB[:conn].execute(sql).first)
   end
 
   def save
